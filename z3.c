@@ -21,21 +21,21 @@ int main()
     setlocale(LC_CTYPE, "rus");
 
     TOVAR product;
-    printf("--- Ввод данных о товаре ---\n");
+    printf("--- Р’РІРѕРґ РґР°РЅРЅС‹С… Рѕ С‚РѕРІР°СЂРµ ---\n");
 
-    printf("Введите наименование (одним словом): ");
+    printf("Р’РІРµРґРёС‚Рµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ (РѕРґРЅРёРј СЃР»РѕРІРѕРј): ");
     scanf("%s", product.name);
 
-    printf("Введите дату производства (день месяц год через пробел): ");
+    printf("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РїСЂРѕРёР·РІРѕРґСЃС‚РІР° (РґРµРЅСЊ РјРµСЃСЏС† РіРѕРґ С‡РµСЂРµР· РїСЂРѕР±РµР»): ");
     scanf("%d %d %d", &product.day_proizv, &product.mesyac_proizv, &product.god_proizv);
 
-    printf("Введите срок годности (в месяцах): ");
+    printf("Р’РІРµРґРёС‚Рµ СЃСЂРѕРє РіРѕРґРЅРѕСЃС‚Рё (РІ РјРµСЃСЏС†Р°С…): ");
     scanf("%d", &product.srog_godnosti);
 
-    printf("Введите цену: ");
+    printf("Р’РІРµРґРёС‚Рµ С†РµРЅСѓ: ");
     scanf("%f", &product.price);
 
-    printf("Введите номер серии: ");
+    printf("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃРµСЂРёРё: ");
     scanf("%s", product.seria);
 
     int posl_day = product.day_proizv;
@@ -45,8 +45,8 @@ int main()
     posl_god += (posl_mesyac - 1) / 12;
     posl_mesyac = (posl_mesyac - 1) % 12 + 1;
 
-    printf("\n--- Результат по заданию ---\n");
-    printf("Наименование товара: %s\n", product.name);
-    printf("Конечная дата применения (годен до): %02d.%02d.%d\n", posl_day, posl_mesyac, posl_god);
+    printf("\n--- Р РµР·СѓР»СЊС‚Р°С‚ РїРѕ Р·Р°РґР°РЅРёСЋ ---\n");
+    printf("РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂР°: %s\n", product.name);
+    printf("РљРѕРЅРµС‡РЅР°СЏ РґР°С‚Р° РїСЂРёРјРµРЅРµРЅРёСЏ (РіРѕРґРµРЅ РґРѕ): %02d.%02d.%d\n", posl_day, posl_mesyac, posl_god);
     return 0;
 }
